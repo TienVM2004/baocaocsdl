@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
  * Here lies all the GET 
  */
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.render('intro');
 });
 app.get('/login', function(req, res) {
   res.render('login');
