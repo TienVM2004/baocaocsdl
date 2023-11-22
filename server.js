@@ -64,9 +64,6 @@ app.get('/login_success', function(req, res) {
 // });
 
 app.post('/login', async function(req, res) {
-  if(req.body.username == "") {
-    res.redirect('/login_fail');
-  }
   const result = await find(client, req.body.username, req.body.password);
   if(result) {
       res.redirect(`/login_success?username=${req.body.username}`);
