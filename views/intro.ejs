@@ -3,6 +3,11 @@
 <head>
     <title>Welcome Page</title>
     <link rel="stylesheet" type="text/css" href="/css/introStyle.css">
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
 </head>
 <body>
   <div class="whole_div">
@@ -11,13 +16,13 @@
     </div>
     <div class="buttons">
         <div class="login_button_div">
-            <button class="buttons"><a href="/login">Login</a></button>
+            <button class="buttons" onclick="redirectTo('/login')">Login</button>
         </div>
         <div class="register_button_div">
-            <button class="buttons"><a href="/register">Register</a></button>
+            <button class="buttons" onclick="redirectTo('/register')">Register</button>
         </div>
         <div class="delete_button_div">
-            <button class="buttons"><a href="/delete">Delete</a></button>
+            <button class="buttons" onclick="redirectTo('/delete')">Delete</button>
         </div>
     </div>
   </div> 

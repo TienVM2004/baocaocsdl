@@ -5,7 +5,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('/util/background2.jpg');
+    background-image: url('/util/background4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -48,21 +48,4 @@ body {
 
 .whole_div input[type="submit"]:hover {
     background-color: #806e6e;
-}
-
-.fail_text {
-    font-weight: bold;
-    color: #806e6e;
-}
-
-.login {
-    font-weight: bold;
-    color: #806e6e;
-    /* text-decoration: none; */
-}
-
-.register {
-    font-weight: bold;
-    color: #806e6e;
-    /* text-decoration: none; */
 }

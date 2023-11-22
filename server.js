@@ -31,6 +31,15 @@ app.get('/success', function(req, res) {
 app.get('/fail', function(req, res) {
   res.send('Login failed!');
 });
+app.get('/register_fail', function(req, res) {
+  res.render('register_fail');
+});
+app.get('/login_fail', function(req, res) {
+  res.render('login_fail');
+});
+app.get('/login_success', function(req, res) {
+  res.render('login_success');
+});
 
 
 /** 
@@ -39,17 +48,17 @@ app.get('/fail', function(req, res) {
 app.post('/login', async function(req, res) {
   const result = await find(client, req.body.username, req.body.password);
   if(result) {
-      res.redirect('/success');
+      res.redirect('/login_success');
   } else {
       // Send the message as part of the redirect URL
-      res.redirect('/fail');
+      res.redirect('/login_fail');
   }
 });
 
 app.post('/register', async function(req, res) {
   const result = await findByUserName(client, req.body.username);
   if(result) {
-    res.redirect('/fail');
+    res.redirect('/register_fail');
       
   } else {
       // Send the message as part of the redirect URL
@@ -62,10 +71,10 @@ app.post('/delete', async function(req, res) {
   const result = await findByUserName(client, req.body.username);
   if(result) {
     deleteUser(client, req.body.username);
-    res.redirect('/login');
+    res.redirect('/');
   } else {
       // Send the message as part of the redirect URL
-    res.redirect('/fail');
+    res.redirect('/');
   }
 });
 

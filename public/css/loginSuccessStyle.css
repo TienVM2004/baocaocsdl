@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items:first baseline;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/util/background5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.whole_div {
+    margin-top: 10%;
+    padding: 20px;
+    background-color: #d3d3d3;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.form {
+    display: flex;
+    flex-direction: row; /* Change this from column to row */
+    align-items: center; /* Add this to vertically align the items */
+}
+
+.whole_div label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.login {
+    font-weight: bold;
+    color: #806e6e;
+}
+
+.register {
+    font-weight: bold;
+    color: #806e6e;
+}
+
+.avatar {
+    width: 5%;
+    height: 5%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.avatar_div{
+    display: inline-block;
+}

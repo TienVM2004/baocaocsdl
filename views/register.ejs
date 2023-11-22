@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Login Page</title>
@@ -8,7 +8,6 @@
   <div class="form_container">
     <form action="/register" method="post" class="form">
         <fieldset class="fieldset">
-            <!-- <legend>Login</legend> -->
             <div>
                 <label for="username">New username:</label>
                 <input type="text" id="username" name="username"/>
@@ -24,4 +23,33 @@
     </form>
   </div>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/registerStyle.css">
+</head>
+<body>
+  <div class="whole_div">
+    <form action="/register" method="post" class="form">
+        <fieldset class="fieldset">
+            <div class="username_div">
+                <label for="username">New username:</label>
+                <input type="text" id="username" name="username"/>
+            </div>
+            <div class="password_div">
+                <label for="password">New password:</label>
+                <input type="password" id="password" name="password"/>
+            </div>
+            <div class="submit_div">
+                <input type="submit" value="Register"/>
+            </div>
+        </fieldset>
+    </form>
+  </div>
+</body>
 </html>
+
+
