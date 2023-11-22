@@ -37,23 +37,45 @@ app.get('/register_fail', function(req, res) {
 app.get('/login_fail', function(req, res) {
   res.render('login_fail');
 });
+// app.get('/login_success', function(req, res) {
+//   res.render('login_success');
+// });
+
 app.get('/login_success', function(req, res) {
-  res.render('login_success');
+  const username = req.query.username;
+  res.render('login_success', { username: username });
 });
 
 
 /** 
  * Here lies all the POST
  */
+// app.post('/login', async function(req, res) {
+//   if(req.body.username == "") {
+//     res.redirect('/login_fail');
+//   }
+//   const result = await find(client, req.body.username, req.body.password);
+//   if(result) {
+//       res.redirect('/login_success');
+//   } else {
+//       // Send the message as part of the redirect URL
+//       res.redirect('/login_fail');
+//   }
+// });
+
 app.post('/login', async function(req, res) {
+  if(req.body.username == "") {
+    res.redirect('/login_fail');
+  }
   const result = await find(client, req.body.username, req.body.password);
   if(result) {
-      res.redirect('/login_success');
+      res.redirect(`/login_success?username=${req.body.username}`);
   } else {
       // Send the message as part of the redirect URL
       res.redirect('/login_fail');
   }
 });
+
 
 app.post('/register', async function(req, res) {
   const result = await findByUserName(client, req.body.username);

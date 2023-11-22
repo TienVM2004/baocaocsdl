@@ -6,12 +6,13 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('/util/background5.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat; */
 }
 
 .whole_div {
-    margin-top: 10%;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 20px;
     background-color: #d3d3d3;
     border-radius: 8px;
@@ -27,6 +28,7 @@ body {
 .whole_div label {
     font-weight: bold;
     margin-bottom: 5px;
+    
 }
 
 .login {
@@ -49,4 +51,37 @@ body {
 
 .avatar_div{
     display: inline-block;
+}
+
+.welcome_text {
+    text-align: center;
+    align-items: center;
+    display: block;
+    padding-left: 2%;
+}
+
+.register {
+    font-weight: bold;
+    color: #806e6e;
+    /* text-decoration: none; */
+}
+
+.buttons {
+    margin: 0 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 5px;
+    border: none;
+    color: #efefef;
+    background-color: #b69b9b;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.home_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

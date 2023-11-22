@@ -3,6 +3,11 @@
 <head>
     <title>Login Success</title>
     <link rel="stylesheet" type="text/css" href="/css/loginSuccessStyle.css">
+    <script>
+      function redirectTo(url) {
+          window.location.href = url;
+      }
+  </script>
 </head>
 <body>
   <div class="whole_div">
@@ -12,13 +17,29 @@
         <!-- </div> -->
         <br>
         <div class="welcome_text">
-            <b>Welcome! You have successfully logged into our little demo!</b>
+            <h1>Welcome <%= username %>! You have successfully logged into our little demo!</h1>
         </div>
-        
-        
-        
     </form>
-    
+    <br>
+    <div class="text">
+      <h2>Dear user <%= username %>,</h2>
+      <p>Thank you for trying out our website - made for testing some functionalities of the MongoDB DBMS. This website was available in the making of our report about DBSMs, and only serves as a demo.</p>
+      <p>Unfortunately, there were things we could not implement, as they were either lengthy, or simply unrelated to our main goal, which is to try out the database login system.</p>
+      <h2>A few aspects we would like to note:</h2>
+      <h3>- You don't even need to log in to be able to access this page (Find out how!)<br>
+      - There are no user sessions yet.<br>
+      - You do not know who the other users are. (Or do you? It doesn't matter eitherway)<br>
+      - Your password is not hashed in our database. (Yes, we can see your password)<br>
+      - You might very easily find some other bugs that even we do not know about.</h3>
+      <p>But in the end, thanks again for using our website! Have a lovely day!</p>
+      <div class="home_div">
+        <button class="buttons" onclick="redirectTo('/')">Return to homescreen</button>
+      </div>
+      <br><br><br>
+      
+      <small>This was brough to you by Vũ Minh Tiến-22022645, Nguyễn Ngô Việt Trung-22022598 and Phạm Quang Vinh-22022648.
+      </small>
+    </div>
   </div>
 </body>
 </html>
